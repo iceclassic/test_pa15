@@ -28,5 +28,7 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        git config --local user.email "test@github.com"
+        git config --local user.name "GitHub Action test"
         git add test.svg
         git commit -m 'Update test.svg'
