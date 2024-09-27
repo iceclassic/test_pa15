@@ -28,12 +28,5 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --local user.email "test@github.com"
-        git config --local user.name "GitHub Action test"
         git add test.svg
         git commit -m 'Update test.svg'
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
